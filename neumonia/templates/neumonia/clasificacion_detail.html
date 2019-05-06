@@ -1,0 +1,58 @@
+{% extends "neumonia/base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+
+	<h4 class="mt-4">Expediente: {{object.clave_ex}}</h4>
+	<hr>
+		
+			<h5>{{object.prediccion}}</h5>
+
+			<img src="{{object.img.url}}" class="card-img-top mt-2">
+
+			<div class="mt-4">
+					<strong>Nota</strong>
+					<p>{{object.nota}}</p>
+				</div>
+
+			<div class="row mt-4">
+
+				<div class="col-md-6">
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item"><b>Nombre: </b>{{object.paciente.nombre}}</li>
+						<li class="list-group-item"><b>Primer apellido: </b>{{object.paciente.primer_apellido}}</li>
+						<li class="list-group-item"><b>Segundo apellido: </b>{{object.paciente.segundo_apellido}}</li>
+						<li class="list-group-item"><b>Edad: </b>{{object.paciente.edad}} años</li>
+						<li class="list-group-item"><b>Sexo: </b>{{object.paciente.sexo}}</li>
+						<li class="list-group-item"><b>Correo: </b>{{object.paciente.correo}}</li>
+					</ul>
+				</div>
+				<div class="col-md-6">
+					
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item"><b>Opciones</b></li>
+							<li class="list-group-item">
+								<a class="btn btn-sm btn-primary" href="{% url 'clasificacion-editar' object.id %}">Editar</a>
+								<a class="btn btn-sm btn-danger" href="{% url 'clasificacion-eliminar' object.id %}">Eliminar</a>
+								<a class="btn btn-sm btn-info" href="{% url 'paciente-detalles' object.paciente.id %}">Detalles Paciente</a>
+							</li>
+					 
+
+
+
+
+
+
+					</div> 
+				</div>
+
+
+
+
+
+
+	</div>
+
+	{% endblock  %}

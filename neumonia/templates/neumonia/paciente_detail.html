@@ -1,0 +1,50 @@
+{% extends "neumonia/base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+	
+		<h4 class="mt-4">Paciente: {{object.NombreCompleto}}</h4>
+		
+			<div class="row">
+			<div class="col-md-6">
+				<ul class="list-group list-group-flush">
+				<li class="list-group-item"><b>Nombre: </b>{{object.nombre}}</li>
+				<li class="list-group-item"><b>Primer apellido: </b>{{object.primer_apellido}}</li>
+				<li class="list-group-item"><b>Segundo apellido: </b>{{object.segundo_apellido}}</li>
+				<li class="list-group-item"><b>Edad: </b>{{object.edad}} años</li>
+				<li class="list-group-item"><b>Sexo: </b>{{object.sexo}}</li>
+				<li class="list-group-item"><b>Correo: </b>{{object.correo}}</li>
+			</ul>
+			</div>
+			<div class="col-md-6">
+				<ul class="list-group list-group-flush">
+				<li class="list-group-item">Expedientes</li>
+				<li class="list-group-item"><a class="btn btn-sm btn-info" href="{% url 'clasificacion-list' object.nombre %}">Historial Expedientes</a></li>
+				
+				<li class="list-group-item"><a class="btn btn-sm btn-info" href="{% url 'clasificacion-nueva' object.id %}">Nuevo Expediente</a></li>
+				
+			</ul>
+			</div> 
+			</div>
+
+			<div class="mt-5">
+				<strong>Opciones del paciente</strong>
+				<hr>
+				<div class="form-group ">
+				<a class="btn btn-sm btn-primary" href="{% url 'paciente-editar' object.id %}">Editar</a>
+				<a class="btn btn-sm btn-danger" href="{% url 'paciente-eliminar' object.id %}">Eliminar</a>
+				</div>
+				<hr>
+				<a href="{% url 'pacientes-list' %}" class="btn btn-sm btn-primary">Regresar</a>
+			</div>
+
+			
+	
+		
+	
+	
+</div>
+
+{% endblock  %}
