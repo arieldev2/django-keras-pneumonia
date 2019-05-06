@@ -1,4 +1,4 @@
-<h1>Aplicacion web para detectar Neumonía</h1>
+<h1>Aplicación web para detectar Neumonía</h1>
 
 
 <h3>-Precisión Normal</h3>
