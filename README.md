@@ -1,7 +1,7 @@
 <h1>Aplicación web para detectar Neumonía</h1>
 
 
-<h3>-Precisión Normal</h3>
+<h4>-Precisión Normal</h4>
 
 234 Imágenes
 
@@ -13,7 +13,7 @@
 
 ---------------------
 
-<h3>-Precisión Neumonía</h3>
+<h4>-Precisión Neumonía</h4>
 
 390 Imágenes
 
